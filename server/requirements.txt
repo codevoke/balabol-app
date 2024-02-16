@@ -8,3 +8,4 @@ Flask-jwt-extended
 Flask
 
 flask-cors
+gunicorn
