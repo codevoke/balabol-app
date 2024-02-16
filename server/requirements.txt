@@ -1,0 +1,8 @@
+Flask-SQLAlchemy
+passlib
+psycopg2-binary
+
+Flask-RESTful
+Flask-jwt-extended
+
+flask-cors
