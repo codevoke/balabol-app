@@ -23,3 +23,11 @@ class Posts(BaseModel):
         if not obj:
             raise PostNotFoundError
         return obj
+
+    @classmethod
+    def get_by_user_id(cls, user_id):
+        posts = cls.query.filter_by(user_id=user_id).order_by(cls.timestamp)
+        if posts:
+            return posts.all()[::-1]
+        else:
+            raise PostNotFoundError

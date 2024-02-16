@@ -21,4 +21,4 @@ class Auth(Resource):
         except IncorrectPassword:
             return {'message': 'Incorrect password'}, HTTPStatus.UNAUTHORIZED
 
-        return {'token': create_access_token(identity=user.id)}
+        return {'token': create_access_token(identity=user.id), "user": user.json()}

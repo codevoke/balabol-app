@@ -1,8 +1,10 @@
 Flask-SQLAlchemy
+sqlalchemy
 passlib
 psycopg2-binary
 
 Flask-RESTful
 Flask-jwt-extended
+Flask
 
 flask-cors

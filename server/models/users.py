@@ -23,6 +23,7 @@ class Users(BaseModel):
     @classmethod
     def auth(cls, username, password):
         user = cls.query.filter_by(username=username).first()
+        print(password, user.password)
 
         if not user:
             raise UserNotFoundError
