@@ -1,4 +1,4 @@
-name: Docker Compose CI
+name: Docker Image CI
 
 on:
   push:
@@ -7,11 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Build and run Docker Compose
-        run: |
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: |
           docker-compose build
           docker-compose up -d
