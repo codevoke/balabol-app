@@ -1,0 +1,17 @@
+.UserDataBlock {
+    position: relative;
+    width: 80%;
+    left: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 15px 0 15px 25px;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+}
+.UserDataBlock * {
+    margin: 0;
+}

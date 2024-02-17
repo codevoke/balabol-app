@@ -29,16 +29,16 @@ services:
     depends_on:
       - database
 
-  # client:
-  #   build: ./client
-  #   container_name: client
+  client:
+    build: ./client
+    container_name: client
 
-  #   restart: on-failure
+    restart: on-failure
 
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
 
 volumes:
   pgdata: {}
