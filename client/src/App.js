@@ -14,6 +14,8 @@ import SignUpPage from './desktop/pages/SignUpPage';
 import ContentPage from './desktop/pages/ContentPage';
 import NewPostPage from './desktop/pages/NewPostPage';
 import Me from './desktop/pages/Me';
+import Logout from './desktop/pages/Logout';
+import PostPage from './desktop/pages/PostPage';
 
 import './App.css';
 
@@ -27,7 +29,7 @@ function App() {
     user_id: localStorage.getItem('user_id')
   })
 
-  axios.defaults.baseURL = "https://expert-zebra-pjj6q9q9gvgc7jv6-5000.app.github.dev/api";
+  axios.defaults.baseURL = "https://balabol-app.onrender.com/api"
   axios.defaults.headers.post['Content-Type'] = 'application/json';
   
   useEffect(() => {
@@ -57,6 +59,8 @@ function App() {
             <Route path='/me' element={<Me />} />
             <Route path='/user/:user_id' element={<ContentPage />} />
             <Route path='/new/post' element={<NewPostPage />} />
+            <Route path='/logout' element={<Logout />} />
+            <Route path='/post/:post_id' element={<PostPage />} />
           </Routes>
         </Data.Provider>
       </BrowserRouter>

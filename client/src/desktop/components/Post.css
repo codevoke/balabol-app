@@ -1,0 +1,31 @@
+.Post {
+    position: relative;
+    width: 600px;
+    left: 100px;
+    padding: 10px;
+    margin: 2em;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: wheat;
+}
+.PostHeader {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 10px 0 10px;
+}
+.PostContent {
+    white-space: pre-line;
+}
+.PostFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
+.UserHref {
+    color: grey;
+    cursor: pointer;
+}
+.PostHref {
+    color: cornflowerblue;
+    cursor: pointer;
+}
