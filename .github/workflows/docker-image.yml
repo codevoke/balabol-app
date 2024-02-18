@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: docker://alpine:3.8
-    - name: Build the Docker image
-      run: |
-          docker-compose build
-          docker-compose up -d
+    - uses: actions/checkout@v3
+    - uses: isbang/compose-action@v1.5.1
+      with:
+        compose-file: "./docker/docker-compose.yml"
